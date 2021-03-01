@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> Search form</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style2.css'%}">
+        <style>
+            .btn{
+               
+                    border: 0;
+                    background: none;
+                    display: block;
+                    margin: 20px auto ; 
+                    text-align: center ; 
+                    border: 2px solid green; 
+                    padding: 14px 40px ; 
+                    width: 200px;
+                    outline: none;
+                    color: white;
+                    border-radius: 24px;
+                    transition: 0.25s;
+                    cursor: pointer ;
+            }
+            .btn:hover{
+                background: green;
+            }
+        </style>
+    </head>
+    <body>
+      
+   
+        <form action="results" class="box" method="POST">
+            {% csrf_token %}
+            <h1>Happy Learning</h1>
+            <input type="text" name="course" placeholder="Course Name">
+           
+            <input type="submit" class="btn">
+        </form>
+      
+    </body>
+</html>

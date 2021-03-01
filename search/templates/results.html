@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif ; 
+            background: green;
+        }
+
+    </style>
+</head>
+<body>
+    
+<div class="container">    <div class="jumbotron" style="background-color: black;">
+        <h1 style="color: white;">Your desired Courses</h1>
+       
+        
+      </div>
+   
+      <div class="course" >
+		<div class="container">
+			
+			<div class="row ">
+				<div class="col">
+					<div class="list">
+
+						{% for des in sc %}
+						<div class="item">
+							<div class="course_image">
+								<img src="{{des.img.url}}" alt="" style="height: 100px; width: 100px;">
+								
+							</div>
+							<div class="course_content">
+                                <div class="course_title"><h3 style="color: black;">{{des.name}}</h3></div>
+                                <div class="course_subtitle"><p><b>{{des.desc}}</b></p></div>
+                                <div class="course_link"><a href="{{des.link}}" style="color: black;">{{des.link}}</a></div>
+								
+								<div class="course_price"><b>From {{des.price}}</b></div>
+							</div>
+                        </div>
+                        <br>
+                        {% endfor %}
+						
+						
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <br>
+    <br>
+   
+        
+
+</body>
+</html>
+</body>
+</html>
